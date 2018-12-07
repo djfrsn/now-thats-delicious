@@ -1,6 +1,6 @@
 ## What is this?
 
-Just you wait folks!
+Building a web app to practice NodeJS!
 
 ## Sample Data
 
