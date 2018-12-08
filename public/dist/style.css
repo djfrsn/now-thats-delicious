@@ -599,9 +599,6 @@ label {
   .flash p {
     margin: 0; }
 
-.flash-messages {
-  margin-top: 2rem; }
-
 .nav {
   display: -ms-flexbox;
   display: flex;
