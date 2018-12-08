@@ -555,17 +555,17 @@ label {
     transform: translateX(0px); } }
 
 .flash {
-  background: white;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-  margin-bottom: 2rem;
-  padding: 2rem;
   position: relative;
   z-index: 1;
-  border-radius: 3px;
   display: -ms-flexbox;
   display: flex;
-  animation: slideIn forwards .1s ease-in-out 2;
-  animation-timing-function: cubic-bezier(0.01, 1.68, 0.58, 1); }
+  margin-bottom: 2rem;
+  padding: 2rem;
+  animation: slideIn forwards 0.1s ease-in-out 2;
+  animation-timing-function: cubic-bezier(0.01, 1.68, 0.58, 1);
+  border-radius: 3px;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); }
   .flash + .flash {
     animation-delay: 0.55s; }
     .flash + .flash + .flash {
@@ -574,22 +574,22 @@ label {
     -ms-flex: 1;
         flex: 1; }
   .flash__remove {
-    background: none;
-    border: 0; }
+    border: 0;
+    background: none; }
     .flash__remove:hover {
       color: #FFC40E; }
   .flash:after {
-    content: '';
-    display: block;
-    background: white;
     position: absolute;
-    width: calc(100% - 16px);
-    height: calc(100% - 16px);
+    z-index: -1;
     top: 8px;
     left: 8px;
-    z-index: -1;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
-    border-radius: 3px; }
+    display: block;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    content: '';
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1); }
   .flash--success {
     background: linear-gradient(135deg, #d2ff52 0%, #91e842 100%); }
   .flash--error {
@@ -598,6 +598,9 @@ label {
     background: linear-gradient(35deg, #f1e767 0%, #feb645 100%); }
   .flash p {
     margin: 0; }
+
+.flash-messages {
+  margin-top: 2rem; }
 
 .nav {
   display: -ms-flexbox;
